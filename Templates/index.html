@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Menu</title>
+    <style>
+        body {
+  background: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-507832379-1548871372.jpg?crop=1.00xw:0.752xh;0,0.248xh&resize=1200:*) ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h1, h2, h4, p {
+  text-align: center;
+}
+
+.menu {
+  width: 40%;
+  background-color: #EAEDF2;
+  margin-left: 5%;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 20px;
+  max-width: 500px;
+
+}
+p.footer {
+  font-size: 12px;
+}
+
+form{
+    width:auto;
+    margin: auto;
+    color:whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: #7c7a78af;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px 25px;
+}
+
+input[type=text], input[type=password]{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 15px 18px;
+    box-sizing: border-box;
+  }
+
+button {
+    background-color: #030804;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+  }
+
+button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.mainContainer{
+    padding: 16px;
+}
+</style>
+  </head>
+  <body>
+    <div class="menu">
+      <main>
+        <h1>INTELLIGENT PROPERTY ANALYSER</h1>
+        <hr>
+        <section>
+          <p>Here you can view property records and predict property prices based on your input.</p>
+        </section>
+        <form action="">
+          <div class="mainContainer">
+              <label for="username">Your Username: </label>
+              <input type="text" placeholder="Enter Username" name="username" required>
+              <br>
+              <label for="pswrd">Your Password: </label>
+              <input type="password" placeholder="Enter Password" name="pswrd" required>
+              <br>
+ 
+              <button type="submit">Login</button>
+  
+          </div>
+  
+      </form>
+          <p>For admins, username is admin and password is password</p>
+          <p>For users, username is user and password is password</p>
+        
+      </main>
+      <hr class="bottom-line">
+      <footer>
+        <p class="footer">Internship Project for TCS iON - <i>Parth Morankar</i></p>
+      </footer>
+    </div>
+  </body>
+</html>

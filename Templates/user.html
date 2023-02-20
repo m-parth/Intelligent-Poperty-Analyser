@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House Price Predictor</title>
+<style>
+  * {
+  margin: 0
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #6699cc;
+}
+
+.container h1 {
+  color: white;
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+.container p {
+  color: white;
+  font-family: sans-serif;
+  margin: 5px;
+  font-size: 18px;
+  align-items: center
+}
+
+.registartion-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-family: sans-serif;
+  background-color: #154a68;
+  padding: 20px;
+}
+
+.registartion-form input,
+.registartion-form select,
+.registartion-form textarea {
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+  font-family: sans-serif;
+}
+
+.registartion-form input:focus,
+.registartion-form textarea:focus {
+  box-shadow: 3px 3px 10px rgb(228, 228, 228), -3px -3px 10px rgb(224, 224, 224);
+}
+
+.registartion-form .submit{
+  width: 49%;
+  padding: 8px 0;
+  font-size: 20px;
+  color: rgb(44, 44, 44);
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.registartion-form .submit:hover {
+  box-shadow: 3px 3px 6px rgb(255, 214, 176);
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>House Price Predictor</h1>
+    <form name="registration" class="registartion-form" action="result" onsubmit="return formValidation()">
+      <table>
+        <tr>
+          <td><label for="area">Enter Area:</label></td>
+          <td><input type="number" name="area" id="area" placeholder="Area in sft" required></td>
+        </tr>
+        <tr>
+          <td><label for="bedrooms">Bedrooms</label></td>
+          <td>
+            <select name="bedrooms" id="bedrooms">
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="bathrooms">No. of Bathrooms</label></td>
+          <td>
+            <select name="bathrooms" id="bathrooms">
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="stories">No. of Stories</label></td>
+          <td>
+            <select name="stories" id="stories">
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="mainroad">Mainroad:</label></td>
+          <td>Yes: <input type="radio" name="mainroad" value=1 checked>
+            No: <input type="radio" name="mainroad" value=0>
+        </tr>
+        <tr>
+          <td><label for="guestroom">Guestroom:</label></td>
+          <td>Yes: <input type="radio" name="guestroom" value=1 checked>
+            No: <input type="radio" name="guestroom" value=0>
+        </tr>
+        <tr>
+          <td><label for="basement">Basement:</label></td>
+          <td>Yes: <input type="radio" name="basement" value=1 checked>
+            No: <input type="radio" name="basement" value=0>
+        </tr>
+        <tr>
+          <td><label for="hotwaterheating">Hot Water Heating:</label></td>
+          <td>Yes: <input type="radio" name="hotwaterheating" value=1 checked>
+            No: <input type="radio" name="hotwaterheating" value=0>
+        </tr>
+        <tr>
+          <td><label for="airconditioning">Air Conditioning:</label></td>
+          <td>Yes: <input type="radio" name="airconditioning" value=1 checked>
+            No: <input type="radio" name="airconditioning" value=0>
+        </tr>
+        <tr>
+          <td><label for="parking">No. of Parkings</label></td>
+          <td>
+            <select name="parking" id="parking">
+              <option value=1>0</option>
+              <option value=2>1</option>
+              <option value=3>2</option>
+              <option value=4>3</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="prefarea">Prefered Area:</label></td>
+          <td>Yes: <input type="radio" name="prefarea" value=1 checked>
+            No: <input type="radio" name="prefarea" value=0>
+        </tr>
+        <tr>
+          <td><label for="furnishing">Furnishing:</label></td>
+          <td>Unfurnished: <input type="radio" name="furnishing" value="unfurnished" checked>
+            Semi-furnished: <input type="radio" name="furnishing" value="semi-furnished">
+            Furnished: <input type="radio" name="furnishing" value="furnished">
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" class="submit" value="Submit" />
+          <input type="reset" class="submit" value="Clear" /></td>
+        </tr>
+        <tr>
+          <td colspan=""><p>Predicted Property price is: </p></td>
+          <td><p><b>$ {{Result}}</b></p></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>
